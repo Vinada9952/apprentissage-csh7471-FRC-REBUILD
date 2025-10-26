@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant Robot
+participant Controller
+participant DriveFrame
+participant Arm
+
+== Data collection ==
+Robot++
+Robot -> Controller : poll()\nIdentified what buttons\nwere pressed since last time
+Controller++
+Robot /-- Controller
+
+Robot -> DriveFrame : poll()\nCalculate position
+DriveFrame ++
+Robot /-- DriveFrame
+DriveFrame --
+
+Robot -> Controller: getXXStick()
+Robot <-- Controller: StickPosition
+Controller--
+
+== Drive ==
+
+Robot -> DriveFrame : singleStickDrive(x/y)\nORdualStickDrive(y, y)\nSet drive frame motor speed\nnbased on user input
+DriveFrame ++
+Robot /-- DriveFrame
+DriveFrame --
+
+== Move arm ==
+Robot -> Arm : targetReefLevel(level)\nSet what "level" we want the\±narm to be at
+Arm ++
+Robot /-- Arm
+
+Robot -> Arm : move()\nSet the arm motors\nbased on the target "level"
+Robot /-- Arm
+Arm --
+Robot--
+
+@enduml

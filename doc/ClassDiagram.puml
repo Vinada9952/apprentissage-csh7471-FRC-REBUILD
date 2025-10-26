@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class XboxController #LightYellow
+
+class MotorController #LightYellow
+class PIDController #LightYellow
+class Encoder #LightYellow
+
+class DifferentialDrive #LightYellow
+
+class Robot
+
+class Controller {
+  - hardwareController: XboxController
+  - armPositionRequest: int
+  ---
+  + poll()
+  ---
+  + getDriveStickPosition(): StickPosition
+  + getLeftStickPosition(): StickPosition
+  + getRightStickPosition(): StickPosition
+  + moveArmToPositionRequested(): int
+}
+
+
+class DriveFrame {
+  - differentialDrive: DifferentialDrive
+  ---
+  + poll()
+  ---
+  + singleStickDrive(StickPosition)
+  + dualStickDrive(StickPosition, StickPosition)
+}
+
+class Arm {
+  - jointXController: MotorController
+  - jointXPidController: PIDController
+  - jointXEncoder: Encoder
+  - jointXTargetPosition: double
+  ---
+  + deploy()
+  + park()
+  + setTargetPositions(double, double, double)
+  + targetReefLevel(int)
+  ---
+  + manualControl(double, double, double)
+  + move()
+}
+
+class StickPosition {
+    - x: double
+    - y: double
+}
+
+Robot *--> "1" Controller
+Robot *--> "1" DriveFrame
+Robot *--> "1" Arm
+Controller *--> "1" XboxController
+DriveFrame *--> "1" DifferentialDrive
+DriveFrame *--> "2" MotorController
+Arm *--> "1..n" MotorController
+Arm *--> "1..n" PIDController
+Arm *--> "1..n" Encoder
+
+
+
+@enduml
