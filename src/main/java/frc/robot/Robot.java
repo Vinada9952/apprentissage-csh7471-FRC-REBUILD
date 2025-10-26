@@ -44,9 +44,8 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    // TODO: stocker la valeur d'un stick dans une variable de type StickPosition et après l'envoyer au drive frame
-    // Fonctions nécéssaires : controller.getLeftStickPosition() ou controller.getRightStickPosition() pour obtenir les données du joystick désiré
-    // driveFrame.singleStickDrive( StickPosition stick_position ) pour envoyer un StickPosition au drive frame pour bouger le robot
+    StickPosition left_joystick = controller.getLeftStickPosition();
+    driveFrame.singleStickDrive( left_joystick );
   }
 
   /** This function is called once when the robot is disabled. */
