@@ -45,7 +45,8 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     StickPosition left_joystick = controller.getLeftStickPosition(); // Ici, le code va chercher la position du joystick gauche de la manette et va le stocker dans une variable
-    
+    StickPosition right_joystick = controller.getRightStickPosition();//Ici, le code va chercher la position du joystick right de la manette et va le stocker dans une variable
+    StickPosition both_sticks = 
     // TODO: Créer une variable right_joystick de type StickPosition pour le joystick droit
     // TODO: Créer une variable both_sticks de type Stickposition qui contient la donnée x tu stick droit et x du stick gauche
     
