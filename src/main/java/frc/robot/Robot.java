@@ -47,8 +47,7 @@ public class Robot extends TimedRobot {
     StickPosition left_joystick = controller.getLeftStickPosition(); // Ici, le code va chercher la position du joystick gauche de la manette et va le stocker dans une variable
     
     StickPosition right_joystick = controller.getRightStickPosition();
-    // TODO: Créer une variable both_sticks de type Stickposition qui contient la donnée x tu stick droit et x du stick gauche
-    
+    StickPosition both_sticks    = new StickPosition(right_joystick.x(),left_joystick.y());
     driveFrame.singleStickDrive( both_sticks ); // Le code veut envoyer la variable both_sticks au drive frame, mais elle n'existe pas, vous devez donc la créer
   }
 
