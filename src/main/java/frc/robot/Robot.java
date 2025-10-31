@@ -45,12 +45,39 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     
-   StickPosition left_joystick = controller.getLeftStickPosition(); // Ici, le code va chercher la position du joystick gauche de la manette et va le stocker dans une variable
-   StickPosition right_joystick = controller.getRightStickPosition(); 
-   StickPosition both_sticks = new StickPosition(right_joystick.x(), left_joystick.y()); // TODO: Créer une variable right_joystick de type StickPosition pour le joystick droit
-    // TODO: Créer une variable both_sticks de type Stickposition qui contient la donnée x tu stick droit et y du stick gauche
+    StickPosition left_joystick = controller.getLeftStickPosition();
+    StickPosition right_joystick = controller.getRightStickPosition();
+    StickPosition both_sticks = new StickPosition( right_joystick.x(), left_joystick.y() );
     
-    driveFrame.singleStickDrive( both_sticks ); // Le code veut envoyer la variable both_sticks au drive frame, mais elle n'existe pas, vous devez donc la créer
+    driveFrame.singleStickDrive( both_sticks );
+
+    /*
+     * fait attention à ton indentation, donc le nombre d'espaces devant chaque ligne. Pour rendre le code lisible, on doit faire le bon nombre d'espaces
+     * À chaque fois que tu écris dans un fonction, classe ou condition, fait 2 espace pour rendre le code visible. par exemple :
+     * 
+     * public class Robot extends TimedRobot {
+     * public void teleopPeriodic() {
+     * StickPosition left_joystick = controller.getLeftStickPosition();
+     * StickPosition right_joystick = controller.getRightStickPosition();
+     * StickPosition both_sticks = new StickPosition( right_joystick.x(), left_joystick.y() );
+     * driveFrame.singleStickDrive( both_sticks );
+     * }
+     * }
+     * 
+     * est plus difficile à lire que ce code :
+     * 
+     * public class Robot extends TimedRobot {
+     *   public void teleopPeriodic() {
+     *     StickPosition left_joystick = controller.getLeftStickPosition();
+     *     StickPosition right_joystick = controller.getRightStickPosition();
+     *     StickPosition both_sticks = new StickPosition( right_joystick.x(), left_joystick.y() );
+     * 
+     *     driveFrame.singleStickDrive( both_sticks );
+     *   }
+     * }
+     * 
+     * fait attention à ça la prochaine fois
+     */
   }
 
   /** This function is called once when the robot is disabled. */
