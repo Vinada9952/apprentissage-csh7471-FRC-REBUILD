@@ -47,10 +47,13 @@ public class Robot extends TimedRobot {
     StickPosition left_joystick = controller.getLeftStickPosition(); // Ici, le code va chercher la position du joystick gauche de la manette et va le stocker dans une variable
     StickPosition right_joystick = controller.getRightStickPosition();//Ici, le code va chercher la position du joystick right de la manette et va le stocker dans une variable
     StickPosition both_sticks = new StickPosition(right_joystick.x(),left_joystick.y());
-    // TODO: Créer une variable right_joystick de type StickPosition pour le joystick droit
-    // TODO: Créer une variable both_sticks de type Stickposition qui contient la donnée x tu stick droit et x du stick gauche
     
-    driveFrame.singleStickDrive( both_sticks ); // Le code veut envoyer la variable both_sticks au drive frame, mais elle n'existe pas, vous devez donc la créer
+    driveFrame.singleStickDrive( both_sticks );
+    /*
+     * Tout est parfait. Petit plus si tu veux faire, comme Anthony, tu peux essayer de faire les bons commentaires, comme ici tu l'as bien fait (mieux qu'Anthony même)
+     * Fait juste attention, les espaces devant et après les "//" pour bien les mettres et la langue utilisé, c'est écrit joystick gauche et joystick Right
+     * Aussi, met des espaces après tes virgules, histoire de rendre le code plus lisible
+     */
   }
 
   /** This function is called once when the robot is disabled. */
