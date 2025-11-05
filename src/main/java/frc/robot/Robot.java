@@ -47,8 +47,7 @@ public class Robot extends TimedRobot {
     StickPosition left_joystick = controller.getLeftStickPosition();
     StickPosition right_Joystick = controller.getRightStickPosition(); // C'est conseillé pour les variables de mettre que tes minuscules
     
-    StickPosition both_sticks = new StickPosition(right_Joystick.x(),left_joystick.y());
-    driveFrame.singleStickDrive( both_sticks );
+    driveFrame.dualStickDrive(left_joystick,right_Joystick);
 
     // Rien à dire, le code est bon. prochaine fois, fait juste mettre un espace après la virgule, pour rendre ça plus lisible, et fait attention à tes majuscules
   }
