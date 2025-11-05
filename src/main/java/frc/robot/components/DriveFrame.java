@@ -29,6 +29,7 @@ public class DriveFrame {
     public void dualStickDrive( final StickPosition leftStickPosition, final StickPosition rightStickPosition ) {
 
         differentialDrive.arcadeDrive(leftStickPosition.y(), rightStickPosition.x());
-
+        
+        /* Tout est bon ici */
     }
 }

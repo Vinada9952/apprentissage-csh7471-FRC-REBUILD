@@ -48,6 +48,8 @@ public class Robot extends TimedRobot {
     StickPosition right_joystick = controller.getRightStickPosition(); 
     
     driveFrame.dualStickDrive(left_joystick, right_joystick);
+
+    /* Tout est bon ici */
     
   }
 
