@@ -46,9 +46,8 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     StickPosition left_joystick = controller.getLeftStickPosition();
     StickPosition right_joystick = controller.getRightStickPosition(); 
-    StickPosition both_sticks = new StickPosition(left_joystick.x(), right_joystick.y());
     
-    driveFrame.singleStickDrive( both_sticks );
+    driveFrame.dualStickDrive(left_joystick, right_joystick);
 
     /*
      * Rien à dire. Petit plus si tu veux faire : Documente ton code et met les bons commentaires à la bonne place et enlève ceux qui sont inutiles
