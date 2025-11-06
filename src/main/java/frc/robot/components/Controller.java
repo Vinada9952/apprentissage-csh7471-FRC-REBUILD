@@ -21,4 +21,8 @@ public class Controller {
     public StickPosition getRightStickPosition() {
         return new StickPosition(hardwareController.getRightX(), hardwareController.getRightY());
     }
+
+    public StickPosition getDriveStickPosition() {
+        // TODO: Mettre le x droite et y gauche dans une seule variable et retourner le tout
+    }
 }
