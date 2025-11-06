@@ -47,8 +47,7 @@ public class Robot extends TimedRobot {
     StickPosition left_joystick = controller.getLeftStickPosition();
     StickPosition right_joystick = controller.getRightStickPosition();
     
-    StickPosition both_sticks = new StickPosition( right_joystick.x(), left_joystick.y() );
-    driveFrame.singleStickDrive( both_sticks );
+    driveFrame.dualStickDrive( left_joystick, right_joystick );
   }
 
   /** This function is called once when the robot is disabled. */

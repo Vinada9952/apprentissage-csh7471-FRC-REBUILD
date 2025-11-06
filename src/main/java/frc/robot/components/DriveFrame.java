@@ -27,8 +27,7 @@ public class DriveFrame {
     }
 
     public void dualStickDrive( final StickPosition leftStickPosition, final StickPosition rightStickPosition ) {
-        // TODO: faire la même chose qu'au dernier cours, mais dans cette fonction
-        // pour envoyer une donnée au moteurs, on va utiliser la fonction arcadeDrive du differentialDrive
-        // differentialDrive est une variable qui contient en données les 2 moteurs, donc on fait juste lui envoyer un joystick et elle s'occupe du reste
+        StickPosition both_sticks = new StickPosition( rightStickPosition.x(), leftStickPosition.y() );
+        differentialDrive.arcadeDrive( both_sticks.y(), both_sticks.x() );
     }
 }
