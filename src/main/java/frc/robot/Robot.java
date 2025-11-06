@@ -49,12 +49,7 @@ public class Robot extends TimedRobot {
 
     
     driveFrame.dualStickDrive(left_joystick, right_joystick);
-    /*
-     * Tout est parfait. Petit plus si tu veux faire, comme Anthony, tu peux essayer de faire les bons commentaires, comme ici tu l'as bien fait (mieux qu'Anthony même)
-     * Fait juste attention, les espaces devant et après les "//" pour bien les mettres et la langue utilisé, c'est écrit joystick gauche et joystick Right
-     * Aussi, met des espaces après tes virgules, histoire de rendre le code plus lisible
-     * J'ai aussi regardé ton code, je l'ai build, je n'ai pas d'erreurs, on verra la prochaine fois pourquoi ça ne marche pas sur ton ordi
-     */
+    /* Tout est bon ici */
   }
 
   /** This function is called once when the robot is disabled. */
