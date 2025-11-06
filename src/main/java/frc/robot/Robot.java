@@ -46,7 +46,7 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     StickPosition left_joystick = controller.getLeftStickPosition();
     StickPosition right_Joystick = controller.getRightStickPosition(); // C'est conseillé pour les variables de mettre que tes minuscules
-    
+    // TODO: Utiliser getDriveStickPosition du controller à la place du dualStickDrive du driveFrame
     driveFrame.dualStickDrive(left_joystick,right_Joystick); /* Fait attention à tes majuscules !!! et aussi aux espaces après la virgule */
 
     // Rien à dire, le code est bon. prochaine fois, fait juste mettre un espace après la virgule, pour rendre ça plus lisible, et fait attention à tes majuscules
