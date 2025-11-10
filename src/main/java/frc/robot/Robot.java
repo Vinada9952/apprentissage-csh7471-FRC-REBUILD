@@ -46,10 +46,9 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     
     StickPosition left_joystick = controller.getLeftStickPosition();
-    StickPosition right_joystick = controller.getRightStickPosition();
-    StickPosition both_sticks = new StickPosition( right_joystick.x(), left_joystick.y() );
+    StickPosition right_joystick = controller.getRightStickPosition();   
     
-    driveFrame.singleStickDrive( both_sticks );
+    driveFrame.dualStickDrive( left_joystick, right_joystick );
 
     /*
      * fait attention à ton indentation, donc le nombre d'espaces devant chaque ligne. Pour rendre le code lisible, on doit faire le bon nombre d'espaces
