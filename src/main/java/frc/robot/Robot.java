@@ -50,13 +50,8 @@ public class Robot extends TimedRobot {
     driveFrame.dualStickDrive( left_joystick, right_joystick );
 
     /*
-     * Pourquoi est ce qu'il faut faire attentions à ces espace :
-     * 1. Pour rendre le code plus lisible
-     * 2. Pour montrer les différentes parties du code
-     * 
-     * Les 2 premières lignes doivent être mises ensemble car elle font pas mal la même chose : récolter les données de la manette.
-     * Après, la prochaine ligne est à part car elle va récolter les 2 valeurs et les mettre ensemble pour ensuite les envoyer au driveframe
-     */
+     * Tout est bon, rien à dire ici
+    */
   }
 
   /** This function is called once when the robot is disabled. */
