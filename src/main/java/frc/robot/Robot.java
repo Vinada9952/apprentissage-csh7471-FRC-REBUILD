@@ -50,33 +50,7 @@ public class Robot extends TimedRobot {
     
     driveFrame.dualStickDrive( left_joystick, right_joystick );
 
-    /*
-     * fait attention à ton indentation, donc le nombre d'espaces devant chaque ligne. Pour rendre le code lisible, on doit faire le bon nombre d'espaces
-     * À chaque fois que tu écris dans un fonction, classe ou condition, fait 2 espace pour rendre le code visible. par exemple :
-     * 
-     * public class Robot extends TimedRobot {
-     * public void teleopPeriodic() {
-     * StickPosition left_joystick = controller.getLeftStickPosition();
-     * StickPosition right_joystick = controller.getRightStickPosition();
-     * StickPosition both_sticks = new StickPosition( right_joystick.x(), left_joystick.y() );
-     * driveFrame.singleStickDrive( both_sticks );
-     * }
-     * }
-     * 
-     * est plus difficile à lire que ce code :
-     * 
-     * public class Robot extends TimedRobot {
-     *   public void teleopPeriodic() {
-     *     StickPosition left_joystick = controller.getLeftStickPosition();
-     *     StickPosition right_joystick = controller.getRightStickPosition();
-     *     StickPosition both_sticks = new StickPosition( right_joystick.x(), left_joystick.y() );
-     * 
-     *     driveFrame.singleStickDrive( both_sticks );
-     *   }
-     * }
-     * 
-     * fait attention à ça la prochaine fois
-     */
+    /* Tout est bon ici, rien à dire */
   }
 
   /** This function is called once when the robot is disabled. */
